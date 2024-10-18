@@ -33,7 +33,7 @@ def test_wffs(wffs, coin_values, desired_max):
             satisfiable.append(wff)
     return satisfiable, num_wffs
 
-def run_tests():
+def run_tests(coin_names, voin_value, coin_quant):
     
     user_input = ""
     user_input = input("What's the name of your first coin? (enter done if no more) ")
@@ -95,7 +95,10 @@ if True:
                 wffs = build_coin_wff(coin_names, coin_value, coin_quant)
                 satisfied, num_wffs = test_wffs(wffs, coin_value, int(row[1]))
                 end_time = time.time()
-                data.append([row[0], num_wffs, end_time-start_time])
+                num_coins = 0
+                for val in coin_quant:
+                    num_coins += val
+                data.append([row[0], num_coins, (end_time-start_time) * 1000])
         with open('output.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerows(data)
