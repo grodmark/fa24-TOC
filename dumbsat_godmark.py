@@ -85,7 +85,7 @@ if True:
         coin_value = [3, 6, 7, 11]
        # with open('output.csv', 'w', newline='') as file:
         #    writer = csv.writer(file)
-        with open('tests.csv', 'r') as file:
+        with open('tests_godmark.csv', 'r') as file:
             csv_reader = csv.reader(file)
             for row in csv_reader:
                 start_time = time.time()
@@ -99,7 +99,7 @@ if True:
                 for val in coin_quant:
                     num_coins += val
                 data.append([row[0], num_coins, (end_time-start_time) * 1000])
-        with open('output.csv', 'w', newline='') as file:
+        with open('output_godmark.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerows(data)
             file.close()
