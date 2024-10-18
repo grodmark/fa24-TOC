@@ -1,0 +1,12 @@
+Team name: godmark
+Names of all team members: Grace Odmark
+Link to github repository: https://github.com/grodmark/fa24-TOC
+Which project options were attempted: "Knapsack" coin dumbsat
+Approximately total time spent on project: 4 hours
+The language you used, and a list of libraries you invoked: python3, matplot.lib, pandas, numpy, scipy.optimize, csv
+How would a TA run your program (did you provide a script to run a test case?): run program using the following "$ python3 dumbsat_godmark.py --file tests.csv" to run program with tests.csv file and will output to output.csv or can do an interactive mode
+A brief description of the key data structures you used, and how the program functioned: I used sets and csv files to create a variation of every possible combination of coins based on the maxes provided, and then calculated whether a specific combination would be equal to the desired value.
+A discussion as to what test cases you added and why you decided to add them (what did they tell you about the correctness of your code). Where did the data come from? (course website, handcrafted, a data generator, other): The test cases were created using testcases_godmark.py which was based on the testcases script written by a student in the class and distributed by Professor Kogge. The script was used to generate tests_godmark.csv which then was used to import the variety of coin combinations used in the script.
+An analysis of the results, such as if timings were called for, which plots showed what? What was the approximate complexity of your program? Time complexity was O(2^number of coins). The graph that I produced reflects this by the time increasing exponentially as the number of coins in the bag increases because the possible combinations of coings increases exponentially.
+A description of how you managed the code development and testing.: I managed the code development and testing by looking atht edumbsat.py example script provided in the course materials and using it to build and test different combinations of coins. I tested incrementally by checking if the returned combinations were true matches, whcih was done by hand, and then I scaled the program to larger numbers of input values.
+Did you do any extra programs, or attempted any extra test cases: I also made the program interactive if the user just runs it as "$ python3 dumbsat_godmark.py" such that the user enters the name, value, and quantity of each coin and the desired output value and then all possible result matches will be printed.
