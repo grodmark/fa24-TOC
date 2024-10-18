@@ -85,7 +85,7 @@ if True:
         coin_value = [3, 6, 7, 11]
        # with open('output.csv', 'w', newline='') as file:
         #    writer = csv.writer(file)
-        with open('tests_godmark.csv', 'r') as file:
+        with open('output_tests_godmark.csv', 'r') as file:
             csv_reader = csv.reader(file)
             for row in csv_reader:
                 start_time = time.time()
